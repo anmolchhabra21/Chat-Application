@@ -3,6 +3,8 @@
 
 Beside-Chat is a Full Stack Chatting App.
 Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
+
+#### By : Anmol Chhabra, 21JE0133, IIT(ISM) DHANBAD, B. Tech in Electrical Engineering
 ## Tech Stack
 
 **Client:** React JS, Zeno
@@ -54,6 +56,7 @@ Start the Client
   
 # Features
 
+### Video Calling 
 ### Authenticaton
 ### Real Time Chatting with Typing indicators
 ### One to One chat
@@ -62,7 +65,6 @@ Start the Client
 ### Notifications 
 ### Add or Remove users from group
 ### View Other user Profile
-### Video Calling 
 
 
   
