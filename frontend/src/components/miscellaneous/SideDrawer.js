@@ -78,7 +78,7 @@ function SideDrawer() {
       };
 
       const { data } = await axios.get(`/api/user?search=${search}`, config);
-
+      // console.log("User Searching", data);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -208,6 +208,7 @@ function SideDrawer() {
               <ChatLoading />
             ) : (
               searchResult?.map((user) => (
+                // {console.log(user)}
                 <UserListItem
                   key={user._id}
                   user={user}

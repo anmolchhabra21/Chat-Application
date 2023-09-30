@@ -188,21 +188,24 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               (!selectedChat.isGroupChat ? (
                 <>
                   {getSender(user, selectedChat.users)}
-                  <>
+                  <span style={{"display": "inline-flex", "gap": "15px"}}>
                     <IconButton icon={<PhoneIcon />} onClick={handleJoinRoom}/>
                     <ProfileModal
                       user={getSenderFull(user, selectedChat.users)}
                     />
-                  </>
+                  </span>
                 </>
               ) : (
                 <>
                   {selectedChat.chatName.toUpperCase()}
-                  <UpdateGroupChatModal
-                    fetchMessages={fetchMessages}
-                    fetchAgain={fetchAgain}
-                    setFetchAgain={setFetchAgain}
-                  />
+                  <span style={{"display": "inline-flex", "gap": "15px"}}>
+                    <IconButton icon={<PhoneIcon />} onClick={handleJoinRoom}/>
+                    <UpdateGroupChatModal
+                      fetchMessages={fetchMessages}
+                      fetchAgain={fetchAgain}
+                      setFetchAgain={setFetchAgain}
+                      />
+                  </span>
                 </>
               ))}
           </Text>

@@ -1,12 +1,14 @@
 import React from 'react'
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 import { useParams } from "react-router";
+import { useHistory } from 'react-router-dom';
 // require('dotenv').config()
 
 
 const VideoCallPage = () => {
   // let { roomId } = useParams(); 
-  console.log(useParams().roomId);
+  // console.log(useParams().roomId); 
+  const history = useHistory();
   const myArray = window.location.href.split("/");
   let roomId = myArray[4];
 
@@ -20,6 +22,7 @@ const VideoCallPage = () => {
     const zp = ZegoUIKitPrebuilt.create(kitToken);
     zp.joinRoom({
       container: element,
+      onLeaveRoom: () => {history.push("/chats");},
       sharedLinks: [
         {
           name: 'Personal link',
